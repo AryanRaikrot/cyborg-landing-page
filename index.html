@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#050912" />
+  <meta name="description" content="CYBORG / 01 — an interactive concept landing page exploring human-machine collaboration. Built for Techfest IIT Bombay." />
+  <title>CYBORG / 01 — Beyond Human</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <script>try{if(sessionStorage.getItem('cyborg-booted'))document.documentElement.classList.add('no-boot')}catch(e){}</script>
+  <link rel="stylesheet" href="style.css" />
+  <noscript><style>.boot{display:none!important}.reveal{opacity:1!important;transform:none!important}</style></noscript>
+</head>
+<body>
+  <!-- Boot sequence -->
+  <div class="boot" id="boot" role="status" aria-live="polite">
+    <div class="boot-inner">
+      <div class="boot-brand">CYBORG<span> / 01</span></div>
+      <pre class="boot-log" id="boot-log" aria-hidden="true"></pre>
+      <div class="boot-bar"><i id="boot-fill"></i></div>
+      <div class="boot-meta"><span id="boot-pct">0%</span><button type="button" id="boot-skip">SKIP ↵</button></div>
+    </div>
+  </div>
+
+  <div class="cursor-dot" aria-hidden="true"></div>
+  <div class="cursor-ring" aria-hidden="true"></div>
+  <div class="progress" aria-hidden="true"><i></i></div>
+  <div class="noise" aria-hidden="true"></div>
+
+  <header class="site-header">
+    <a class="brand" href="#home" aria-label="Cyborg 01 home"><span class="brand-mark">C<span>+</span></span><span>CYBORG<span class="brand-muted"> / 01</span></span></a>
+    <button class="menu-toggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="nav"><span></span><span></span></button>
+    <nav class="nav-links" id="nav" aria-label="Main navigation">
+      <a href="#vision">Vision</a><a href="#systems">Systems</a><a href="#lab">Lab</a><a href="#timeline">Timeline</a><a href="#protocol">Protocol</a>
+      <a class="nav-cta" href="#join">Request access <span>↗</span></a>
+    </nav>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section class="hero section-wrap" id="home">
+      <div class="hero-copy">
+        <div class="eyebrow"><span class="live-dot"></span> HUMAN × MACHINE // 2089</div>
+        <h1 aria-label="Beyond human.">
+          <span class="scramble" data-text="BEYOND" aria-hidden="true">BEYOND</span><br />
+          <span class="scramble outline-text" data-text="HUMAN." aria-hidden="true">HUMAN.</span>
+        </h1>
+        <p class="hero-subtitle">The next step in human progress is not about replacing what makes us human. It is about bringing biology, engineering and intelligent technology together in ways that feel natural.</p>
+        <p class="hero-description">Move your cursor. Scroll. Slide between human and machine. CYBORG / 01 is a speculative, interactive look at what that future could feel like.</p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="#lab">Enter the lab <span>↗</span></a>
+          <a class="text-link" href="#systems"><span class="play-icon">▶</span> Discover the tech</a>
+        </div>
+      </div>
+
+      <div class="hero-visual">
+        <div class="orbit orbit-one"></div><div class="orbit orbit-two"></div><div class="orbit orbit-three"></div>
+        <div class="crosshair crosshair-top">+</div><div class="crosshair crosshair-bottom">+</div>
+        <div class="scan-line"></div>
+        <div class="portrait" id="hero-portrait">
+          <img src="assets/android.jpg" alt="Portrait of a young woman android with a white shell and turquoise eyes" width="720" height="720" />
+          <span class="reticle" style="left:30%;top:20.5%"></span><span class="reticle" style="left:70%;top:20.5%"></span>
+          <span class="corner c-tl"></span><span class="corner c-tr"></span><span class="corner c-bl"></span><span class="corner c-br"></span>
+          <span class="portrait-tag">IRIS ID · MATCHED</span>
+        </div>
+        <div class="visual-label label-left"><span>NEURAL LINK</span><strong id="hud-link">CONNECTED 99.2%</strong><i></i></div>
+        <div class="visual-label label-right"><span>CORE TEMP</span><strong id="hud-temp">36.8°C</strong><i></i></div>
+        <div class="visual-label label-lat"><span>LATENCY</span><strong id="hud-lat">0.4 ms</strong><i></i></div>
+        <div class="visual-caption">SYNTHETIC HUMAN<br /><span>MODEL: NEXUS-7</span></div>
+      </div>
+      <div class="scroll-cue"><span></span> SCROLL TO INTERFACE</div>
+    </section>
+
+    <section class="ticker" aria-label="System capabilities">
+      <div class="ticker-track">
+        <span>NEURAL INTERFACE</span><b>✳</b><span>BIOMECHANICS</span><b>✳</b><span>COGNITIVE AUGMENTATION</span><b>✳</b><span>HUMAN POTENTIAL</span><b>✳</b>
+        <span>NEURAL INTERFACE</span><b>✳</b><span>BIOMECHANICS</span><b>✳</b><span>COGNITIVE AUGMENTATION</span><b>✳</b><span>HUMAN POTENTIAL</span><b>✳</b>
+      </div>
+    </section>
+
+    <!-- VISION -->
+    <section class="vision section-wrap section-pad" id="vision">
+      <div class="section-kicker"><span>01 / THE VISION</span><span>EVOLUTION IS A CHOICE</span></div>
+      <div class="vision-grid reveal">
+        <h2>NOT A REPLACEMENT.<br /><span class="accent-text">AN EXTENSION.</span></h2>
+        <div class="vision-copy">
+          <p class="large-copy">The best technology does not take over. It gives people more freedom to think, create, move and connect.</p>
+          <p>CYBORG / 01 is a speculative design project at the meeting point of biology, robotics and intelligent systems. It asks one question: what could technology look like if human needs shaped every decision from the start?</p>
+          <a class="underlined-link" href="#protocol">Read the protocol <span>↗</span></a>
+        </div>
+      </div>
+      <div class="metrics">
+        <div class="metric reveal"><span class="metric-number"><span class="count" data-to="12000" data-format="int">0</span></span><span class="metric-label">NEURAL CHANNELS</span><p>Imagined interfaces that read intent from thousands of signals, so using a tool feels like thinking, not operating.</p></div>
+        <div class="metric reveal"><span class="metric-number"><span class="count" data-to="0.4" data-dec="1">0</span><span>ms</span></span><span class="metric-label">IDEA → ACTION</span><p>When technology is responsive and intuitive, it supports a person's intention instead of getting in its way.</p></div>
+        <div class="metric reveal"><span class="metric-number"><span class="count" data-to="100" data-format="int">0</span><span>%</span></span><span class="metric-label">USER CONSENT</span><p>Every augmentation is opt-in, explainable and reversible. The human always keeps the final say.</p></div>
+      </div>
+    </section>
+
+    <!-- SYSTEMS -->
+    <section class="systems section-wrap section-pad" id="systems">
+      <div class="section-kicker"><span>02 / THE SYSTEMS</span><span>THREE LAYERS. ONE YOU.</span></div>
+      <div class="systems-heading">
+        <h2>UPGRADE YOUR<br /><span class="outline-text">PERSPECTIVE.</span></h2>
+        <p>Each layer has a different role, but the goal is the same: technology that works with people, adapts to context and earns trust. Hover the cards.</p>
+      </div>
+      <div class="system-cards">
+        <article class="system-card tilt reveal">
+          <div class="card-top"><span>SYS. 001</span><span class="card-symbol">⌁</span></div>
+          <div class="card-graphic graphic-neural"><div class="neural-core"></div><i></i><i></i><i></i><i></i><i></i></div>
+          <h3>NEURAL LINK</h3>
+          <p>Neural interfaces could one day let people control digital tools through signals from the nervous system. The challenge is making that safe, reliable and genuinely useful.</p>
+          <div class="meters">
+            <div class="meter"><span>SIGNAL</span><div class="bar"><i data-v="92"></i></div><b>92%</b></div>
+            <div class="meter"><span>PRIVACY</span><div class="bar"><i data-v="99"></i></div><b>99%</b></div>
+            <div class="meter"><span>BANDWIDTH</span><div class="bar"><i data-v="74"></i></div><b>74%</b></div>
+          </div>
+          <details class="system-detail"><summary>View capabilities</summary><p>Assistive communication, hands-free control and new ways to work with complex software. Privacy, consent and clinical validation come first.</p></details>
+        </article>
+        <article class="system-card tilt featured-card reveal">
+          <div class="card-top"><span>SYS. 002</span><span class="card-symbol">◈</span></div>
+          <div class="card-graphic graphic-bio"><div class="bio-ring"></div><div class="bio-ring ring-two"></div><div class="bio-core"></div><span class="bio-node n1"></span><span class="bio-node n2"></span><span class="bio-node n3"></span></div>
+          <h3>BIO-MECHANICS</h3>
+          <p>Wearable robotics and responsive prosthetics can support movement by working with the body's natural mechanics instead of forcing people to adapt to rigid equipment.</p>
+          <div class="meters">
+            <div class="meter"><span>TORQUE</span><div class="bar"><i data-v="81"></i></div><b>81%</b></div>
+            <div class="meter"><span>COMFORT</span><div class="bar"><i data-v="95"></i></div><b>95%</b></div>
+            <div class="meter"><span>BATTERY</span><div class="bar"><i data-v="68"></i></div><b>68%</b></div>
+          </div>
+          <details class="system-detail"><summary>View capabilities</summary><p>Mobility assistance, adaptable prosthetics and tools that reduce physical strain. Comfort, durability and access matter as much as raw performance.</p></details>
+        </article>
+        <article class="system-card tilt reveal">
+          <div class="card-top"><span>SYS. 003</span><span class="card-symbol">⌬</span></div>
+          <div class="card-graphic graphic-cognition"><div class="cog-grid"></div><div class="cog-chip">AI<span>+</span></div><div class="cog-wave"></div></div>
+          <h3>COGNITIVE AI</h3>
+          <p>Thoughtful AI can help people make sense of large amounts of information, spot patterns and explore options, while important decisions stay in human hands.</p>
+          <div class="meters">
+            <div class="meter"><span>INSIGHT</span><div class="bar"><i data-v="88"></i></div><b>88%</b></div>
+            <div class="meter"><span>EXPLAIN</span><div class="bar"><i data-v="97"></i></div><b>97%</b></div>
+            <div class="meter"><span>OVERRIDE</span><div class="bar"><i data-v="100"></i></div><b>100%</b></div>
+          </div>
+          <details class="system-detail"><summary>View capabilities</summary><p>Systems should explain their limits, protect personal data and let people question or override recommendations. Assistance should strengthen judgement, not replace it.</p></details>
+        </article>
+      </div>
+    </section>
+
+    <!-- LAB -->
+    <section class="lab section-wrap section-pad" id="lab">
+      <div class="section-kicker"><span>03 / THE LAB</span><span>HUMAN ⇄ MACHINE</span></div>
+      <div class="lab-intro reveal">
+        <h2>HOW FAR DO YOU<br /><span class="accent-text">WANT TO GO?</span></h2>
+        <p>Drag the slider, or drag directly on the portrait. The same woman, human on one side and android on the other. Watch the capabilities change with it. One thing never moves: identity.</p>
+      </div>
+      <div class="lab-grid reveal">
+        <div class="lab-stage-wrap">
+          <div class="lab-stage" id="lab-stage" role="img" aria-label="The same woman shown half human and half android; move the slider to change how much is android">
+            <img class="lab-img" src="assets/human.jpg" alt="" width="720" height="720" draggable="false" />
+            <div class="lab-robot" id="lab-robot">
+              <img class="lab-img" src="assets/android.jpg" alt="" width="720" height="720" draggable="false" />
+              <span class="reticle" style="left:30%;top:20.5%"></span><span class="reticle" style="left:70%;top:20.5%"></span>
+            </div>
+            <div class="lab-divider" id="lab-div"><span>‹ ›</span></div>
+          </div>
+          <div class="lab-tags"><span class="tag-human">HUMAN</span><span class="tag-cyborg">CYBORG</span></div>
+        </div>
+        <div class="lab-panel">
+          <div class="lab-status"><span class="eyebrow"><span class="live-dot"></span> SUBJECT STATUS</span><strong id="lab-state">AUGMENTED</strong></div>
+          <label class="lab-slider-label" for="lab-range">AUGMENTATION LEVEL <b id="lab-pct">55%</b></label>
+          <input type="range" id="lab-range" min="0" max="100" value="55" />
+          <div class="lab-presets" role="group" aria-label="Presets">
+            <button type="button" data-set="0">Human</button><button type="button" data-set="50">Hybrid</button><button type="button" data-set="100">Cyborg</button>
+          </div>
+          <div class="stats">
+            <div class="stat"><div class="stat-top"><span>REACTION TIME</span><b id="s-react">—</b></div><div class="bar"><i id="b-react"></i></div></div>
+            <div class="stat"><div class="stat-top"><span>LIFTING STRENGTH</span><b id="s-str">—</b></div><div class="bar"><i id="b-str"></i></div></div>
+            <div class="stat"><div class="stat-top"><span>WORKING MEMORY</span><b id="s-mem">—</b></div><div class="bar"><i id="b-mem"></i></div></div>
+            <div class="stat"><div class="stat-top"><span>VISION RANGE</span><b id="s-vis">—</b></div><div class="bar"><i id="b-vis"></i></div></div>
+            <div class="stat stat-fixed"><div class="stat-top"><span>IDENTITY</span><b>100% YOU</b></div><div class="bar"><i style="width:100%"></i></div></div>
+          </div>
+          <p class="fine">Speculative numbers for a fictional concept.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- TIMELINE -->
+    <section class="timeline-section section-wrap section-pad" id="timeline">
+      <div class="section-kicker"><span>04 / THE TIMELINE</span><span>2026 → 2089</span></div>
+      <div class="timeline-head reveal"><h2>THE ROAD<br /><span class="outline-text">TO NEXUS-7.</span></h2><p>A speculative path from today's assistive tech to a world where augmentation is a personal choice. Keep scrolling.</p></div>
+      <ol class="timeline" id="timeline-list">
+        <li class="tl-item"><span class="tl-year">2026</span><div><h3>Assistive interfaces go clinical</h3><p>Early brain-computer interfaces help people with paralysis type, speak and control devices.</p></div></li>
+        <li class="tl-item"><span class="tl-year">2038</span><div><h3>Prosthetics that feel</h3><p>Adaptive limbs with touch feedback match natural movement and become affordable.</p></div></li>
+        <li class="tl-item"><span class="tl-year">2051</span><div><h3>The neural privacy accord</h3><p>Thought data becomes legally protected. Consent and the right to disconnect are standard.</p></div></li>
+        <li class="tl-item"><span class="tl-year">2070</span><div><h3>Cognitive co-pilots</h3><p>Explainable AI partners are an everyday tool, and people can always overrule them.</p></div></li>
+        <li class="tl-item"><span class="tl-year">2089</span><div><h3>CYBORG / 01</h3><p>Augmentation is a personal choice, open to everyone, and nobody has to give up being human.</p></div></li>
+      </ol>
+    </section>
+
+    <!-- PROTOCOL -->
+    <section class="protocol section-wrap section-pad" id="protocol">
+      <div class="section-kicker"><span>05 / THE PROTOCOL</span><span>BUILT WITH INTENTION</span></div>
+      <div class="protocol-grid">
+        <div class="reveal"><h2>THE FUTURE<br />NEEDS A <span class="accent-text">PROTOCOL.</span></h2><p class="protocol-intro">Capability alone is not progress. A responsible future depends on clear principles, honest limits and the people affected by every design decision.</p></div>
+        <div class="protocol-list">
+          <div class="protocol-item reveal"><span>01</span><div><h3>Human-first by design</h3><p>People understand their options, keep meaningful control and are treated with dignity throughout.</p></div></div>
+          <div class="protocol-item reveal"><span>02</span><div><h3>Transparent by default</h3><p>Explain what a system collects, how it reaches an output and where it may fail. Trust grows when limits are visible.</p></div></div>
+          <div class="protocol-item reveal"><span>03</span><div><h3>Access without barriers</h3><p>Consider different abilities, budgets, languages and lived experiences so useful technology is not reserved for a few.</p></div></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- JOIN -->
+    <section class="join section-wrap" id="join">
+      <div class="join-grid reveal">
+        <div class="join-mark">C<span>+</span></div>
+        <div class="join-main">
+          <div class="eyebrow"><span class="live-dot"></span> INTERFACE ACCESS</div>
+          <h2>READY TO<br /><span class="outline-text">INTERFACE?</span></h2>
+          <p>Request your access pass. Pick the system you're most curious about and receive your CYBORG / 01 ID card. Demo only: nothing is sent or stored.</p>
+
+          <form class="access-form" id="access-form" novalidate>
+            <div class="field"><label for="f-name">CALLSIGN</label><input id="f-name" name="name" type="text" maxlength="24" placeholder="Your name" autocomplete="off" required /></div>
+            <div class="field"><label for="f-sys">FOCUS SYSTEM</label>
+              <select id="f-sys" name="sys"><option>NEURAL LINK</option><option>BIO-MECHANICS</option><option>COGNITIVE AI</option></select>
+            </div>
+            <button class="button button-primary" type="submit">Request access <span>↗</span></button>
+            <p class="form-error" id="f-error" role="alert" hidden>Please enter a callsign.</p>
+          </form>
+
+          <div class="id-card" id="id-card" hidden>
+            <div class="id-head"><span>CYBORG / 01</span><b>ACCESS GRANTED</b></div>
+            <div class="id-body">
+              <div class="id-avatar">C<span>+</span></div>
+              <dl>
+                <div><dt>CALLSIGN</dt><dd id="id-name">—</dd></div>
+                <div><dt>ID</dt><dd id="id-num">—</dd></div>
+                <div><dt>FOCUS</dt><dd id="id-sys">—</dd></div>
+                <div><dt>CLEARANCE</dt><dd>LEVEL 01 · HUMAN-FIRST</dd></div>
+              </dl>
+            </div>
+            <div class="id-barcode" aria-hidden="true"></div>
+            <button type="button" class="text-link" id="id-reset">← New request</button>
+          </div>
+        </div>
+        <div class="join-coordinate">19° 07' 58" N<br />72° 54' 59" E<br /><span>ORIGIN: IIT BOMBAY</span></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer section-wrap">
+    <a class="brand" href="#home"><span class="brand-mark">C<span>+</span></span><span>CYBORG<span class="brand-muted"> / 01</span></span></a>
+    <span class="footer-note">A SPECULATIVE DESIGN PROJECT</span>
+    <span class="techfest-badge">◆ BUILT FOR TECHFEST · IIT BOMBAY</span>
+    <a class="back-top" href="#home">BACK TO TOP ↑</a>
+    <span class="copyright">DESIGNED &amp; BUILT BY ARYAN RAIKROT · STUDENT AMBASSADOR</span>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
